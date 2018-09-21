@@ -1,0 +1,16 @@
+@import "modules/colors";
+@import "modules/typography";
+@import "modules/mixins";
+@import "modules/global";
+
+@import "vendor/slick";
+@import "vendor/slick-theme";
+@import "vendor/animation";
+@import "vendor/fontello";
+
+@import "partials/header";
+@import "partials/menu";
+@import "partials/dishes";
+@import "partials/about";
+@import "partials/gallery";
+@import "partials/footer";

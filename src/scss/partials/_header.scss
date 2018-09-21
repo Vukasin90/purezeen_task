@@ -1,0 +1,263 @@
+//Navigation
+.navigation {
+    background: $white;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @include mq-L(1025px) {
+        height: 110px;
+    }
+}
+.nav-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.logo, nav {
+    display: inline-block;
+}
+
+.logo::after {
+    content: url(../images/logoDots.png);
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+}
+//Hero
+.hero {
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.slide-left, .slide-right {
+    display: block;
+    position: absolute;
+    font-size: 35px;
+    top: 82%;
+    transform: translateY(-50%);
+    color: $white;
+    font-family: $aleo-regular;
+    cursor: pointer;
+    z-index: 2;
+    &:hover {
+        color: $theme-color;
+    }
+    @include mq-L(768px) {
+        top: 50%;
+    }
+}
+
+.slide-left {
+    left: 55px;
+}
+
+.slide-right {
+    right: 55px;
+}
+
+.slick-track {
+    height: 400px;
+    border-bottom: 5px solid $theme-color;
+    @include mq-L(990px) {
+        height: 580px;
+    }
+}
+
+.header-heading {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    h1 {
+        color: $white;
+        font-family: $Mano-Negra-Bold;
+        font-size: 50px;
+        @include mq-L(1025px) {
+            font-size: 100px;
+        }
+    }
+    .kicker {
+        width: 190px;
+        display: inline-block;
+        position: relative;
+        margin-top: 30px;
+        span {
+            color: $white;
+            font-family: $aleo-regular;
+            font-size: 16px;
+        }
+        @include mq-L(1025px) {
+            width: 368px;
+        }
+    }
+    .kicker::before, .kicker::after {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        background: $white;
+        position: absolute;
+        top: 21px;
+        @include mq-L(1025px) {
+            top: 13px;
+        }
+    }
+    .kicker::before {
+        left: -35px;
+    }
+    .kicker::after {
+        right: -35px;
+    }
+    @include mq-L(1025px) {
+        width: 990px;
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 35px;
+    & li button {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        border: none;
+        background: $white;
+        &:hover {
+            background: $theme-color;
+        }
+    }
+    & li.slick-active button {
+        background: $theme-color;
+    }
+}
+
+//Navigation for small screens
+@include mq(1024px) {
+    .top-nav {
+        position: fixed;
+        top: 0;
+        bottom: 100vh;
+        left: 0;
+        right: 0;
+        background: rgba($theme-color, 0.9);
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: all 500ms ease-in-out;
+        li {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 5px 0;
+            &.active {
+                border-top: 1px solid $txt-dark-gray;
+                border-bottom: 1px solid $txt-dark-gray;
+                a {
+                    color: $txt-dark-gray;
+                }
+            }
+            a {
+                font-family: $aleo-regular;
+                font-size: 20px;
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+    .close-nav-menu {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        width: 20px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .close-nav-icon {
+        width: 20px;
+        height: 3px;
+        background: $txt-dark-gray;
+        transform: rotateZ(42deg);
+        &::after {
+            content: '';
+            display: inline-flex;
+            width: 20px;
+            height: 3px;
+            background: $txt-dark-gray;
+            transform: rotateZ(270deg) translateX(14px);
+        }
+    }
+    .nav-wrap {
+        position: relative;
+    }
+    .nav-open {
+        bottom: 0vh;
+        transition: all 500ms ease-in-out;
+    }
+    .logo {
+        display: inline-block;
+    }
+    .hamburger {
+        width: 35px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+    }
+    .hamburger-menu {
+        width: 100%;
+        height: 4px;
+        background: $txt-dark-gray;
+    }
+    .hamburger-menu::before, .hamburger-menu::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: $txt-dark-gray;
+    }
+    .hamburger-menu::after {
+        transform: translateY(20px);
+    }
+    .hamburger-menu::before {
+        transform: translateY(12px);
+    }
+}
+//Navigation for big screens 
+@include mq-L(1025px) {
+    .top-nav li {
+        display: inline-block;
+        margin-right: 30px;
+        width: 65px;
+        text-align: center;
+        padding: 4px;
+        a {
+            text-decoration: none;
+            font-family: $aleo-regular;
+            font-size: 14px;
+            color: $txt-dark-gray;
+        }
+    }
+    .top-nav li.active, .top-nav li:hover, .top-nav li:active {
+        border-top: 1px solid $theme-color;
+        border-bottom: 1px solid $theme-color;
+        a {
+            color: $theme-color;
+        }
+    }
+    .close-nav-menu {
+        display: none;
+    }
+}

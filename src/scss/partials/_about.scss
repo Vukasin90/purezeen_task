@@ -1,0 +1,107 @@
+.about {
+    padding-top: 177px;
+    h1 {
+        font-family: $aleo-bold;
+        font-size: 22px;
+        color: $txt-dark-gray;
+        text-transform: uppercase;
+        &::after {
+            @include mq-L(590px) {
+                content: '';
+                display: inline-block;
+                width: 200px;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.1);
+                margin: 0 0 5px 50px;
+            }
+        }
+    }
+    h2 {
+        font-family: $aleo-light;
+        font-size: 40px;
+        color: $txt-gray;
+        margin: 70px 0 40px;
+    }
+}
+
+.about-wrap h6 {
+    font-family: $aleo-bold;
+    font-size: 16px;
+    color: $txt-dark-gray;
+    margin: 20px 0 15px; 
+}
+
+.about-upper {
+    width: 100%;
+    columns: 420px 2;
+    column-gap: 60px;
+    p {
+        line-height: 30px;
+        font-family: $aleo-light;
+        color: $txt-gray;
+    }
+}
+
+.about-lower {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-list {
+    max-width: 520px;
+    border-top: 1px solid rgba($txt-gray, 0.9);
+    margin-bottom: 40px;
+    ul {
+        margin-left: 25px;
+    }
+    li {
+        font-family: $aleo-light;
+        color: $txt-gray;
+        font-size: 16px;
+        line-height: 24px;
+        list-style: none;
+        &::before {
+            content: '\2022';  
+            color: $theme-color; 
+            font-weight: bold; 
+            display: inline-block; 
+            width: 1em; 
+            margin-left: -1em; 
+          }
+    }
+}
+
+.about-quote {
+    width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 80px 0 40px;
+    p {
+        font-family: $aleo-regular;
+        font-size: 28px;
+        line-height: 36px;
+        color: $txt-gray;
+    }
+    &::before, &::after {
+        display: inline-block;
+        font-family: $aleo-italic;
+        font-size: 128px;
+        color: rgba($txt-gray, 0.3);
+        position: absolute;
+    }
+    &::before {
+        content: url(../images/start-quote.png);
+        top: -95px;
+        left: -44px;
+    }
+    &::after {
+        content: url(../images/end-quote.png);
+        bottom: -30px;
+        right: 0px;
+    }
+}

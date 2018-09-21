@@ -1,0 +1,37 @@
+@font-face {
+    font-family: ManoNegraBold;
+    src: url(../fonts/WCManoNegraBoldBta.otf);
+}
+
+@font-face {
+    font-family: ManoNegra;
+    src: url(../fonts/WCManoNegraBta.otf);
+}
+
+@font-face {
+    font-family: AleoRegular;
+    src: url(../fonts/Aleo-Regular.otf);
+}
+
+@font-face {
+    font-family: AleoBold;
+    src: url(../fonts/Aleo-Bold.otf);
+}
+
+@font-face {
+    font-family: AleoItalic;
+    src: url(../fonts/Aleo-Italic.otf);
+}
+
+@font-face {
+    font-family: AleoLight;
+    src: url(../fonts/Aleo-Light.otf);
+}
+
+$Mano-Negra-Bold: ManoNegraBold;
+$Mano-Negra: ManoNegra;
+
+$aleo-regular: AleoRegular;
+$aleo-bold: AleoBold;
+$aleo-italic: AleoItalic;
+$aleo-light: AleoLight;

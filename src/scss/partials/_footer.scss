@@ -1,0 +1,126 @@
+footer {
+    background: $txt-dark-gray;
+    width: 100%;
+    padding: 86px 0;
+    position: relative;
+}
+
+.footer-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq-L(1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.footer-left-column {
+    margin-bottom: 40px;
+    @include mq-L(1024px) {
+        display: flex;
+        margin-bottom: 0;
+    }
+}
+
+.address {
+    min-width: 300px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    @include mq-L(1024px) {
+        margin: 0 20px 20px 0;
+    }
+}
+
+.address li {
+    list-style: none;
+    color: #ebebeb;
+    font-weight: 100;
+    margin-bottom: 10px;
+    a {
+        text-decoration: none;
+        color: #ebebeb;
+        font-family: $aleo-bold;
+        font-weight: 100;
+    }
+}
+
+.city {
+    font-family: $aleo-bold;
+    font-size: 16px;
+    color: #ebebeb;
+}
+
+.footer-nav {
+    margin: 0 0 20px 0;
+    text-align: center;
+    @include mq-L(1024px) {
+        margin: 0 20px 20px 0;
+    }
+}
+
+.footer-nav li {
+    list-style: none;
+    margin-bottom: 10px;
+    a {
+        color: #ebebeb;
+        font-family: $aleo-regular;
+        font-size: 16px;
+        text-decoration: none;
+    }
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .footer-logo {
+        width: 90px;
+        margin: 0 auto 25px;
+        @include mq-L(1024px) {
+            margin: 0 0 25px;
+        }
+        &::after {
+            content: url(../images/logoDots.png);
+            display: inline-block;
+            width: 10px;
+            height: 5px;
+        }
+    }
+    span {
+        color: #ebebeb;
+        font-family: $aleo-regular;
+        font-size: 16px;
+        margin-bottom: 23px;
+        a {
+            text-decoration: underline;
+            color: #ebebeb;
+        }
+    }
+}
+
+.top-btn {
+    width: 80px;
+    height: 80px;
+    background: $theme-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 40px;
+    top: -110px;
+    font-size: 30px;
+    color: $white;
+    transform: rotateZ(90deg);
+    cursor: pointer;
+    animation: arrow 1000ms infinite ease-in-out;
+}
+
+@keyframes arrow {
+    from {box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.5);}
+    to {box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);}
+}

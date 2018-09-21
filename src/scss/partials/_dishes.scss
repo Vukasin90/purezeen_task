@@ -1,0 +1,222 @@
+.featured-dishes {
+    position: relative;
+    max-width: 1104px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 290px auto 0;
+    h1 {
+        position: absolute;
+        top: -95px;
+        text-transform: uppercase;
+        font-family: $aleo-bold;
+        font-size: 20px;
+        color: $txt-dark-gray;
+        &::after {
+            @include mq-L(1130px) {
+                content: '';
+                display: inline-block;
+                width: 200px;
+                height: 1px;
+                background: rgba($txt-gray, 0.3);
+                margin-left: 20px;
+                position: absolute;
+                top: 57%;
+            }
+        }
+    }
+    @include mq-L(1130px) {
+        justify-content: space-between;
+    }
+}
+
+.diches-dots {
+    position: absolute;
+    width: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 50%;
+    bottom: -70px;
+    transform: translateX(50%);
+    @include mq-L(1130px) {
+        right: 45px;
+        top: -90px;
+        bottom: initial;
+    }
+}
+
+.diches-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba($txt-gray, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    &.active, &:hover {
+        background: $theme-color;
+    }
+}
+
+.dish {
+    width: 100%;
+    margin: 0 0px 20px 0;
+    padding: 0 5px 5px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    img {
+        width: 100%;
+        transition: all 500ms ease-in-out;
+    }
+    @include mq-L(590px) {
+        width: 230px;
+    }
+    &:hover {
+        box-shadow: 5px 5px 20px rgba($black, 0.3);
+        transition: all 300ms ease-in-out;
+        img {
+            transform: scale(1.1);
+            transition: all 500ms ease-in-out;
+        }
+    }
+}
+
+.dish-img {
+    overflow: hidden;
+}
+
+.dish-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    span {
+        font-family: $aleo-bold;
+        font-size: 18px;
+        color: $txt-gray;
+    }
+}
+
+.likes {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    .like-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover, &:active {
+            color: red;
+        }
+    }
+    .likes-num {
+        margin-left: 5px;
+    }
+}
+
+.like-icon-clicked {
+    color: red;
+}
+
+//Menu modal
+
+.menu-modal {
+    position: fixed;
+    padding: 45px 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba($black, 0.8);
+    z-index: 5;
+}
+
+.modal-logo {
+    margin-bottom: 40px;
+}
+
+.modal-menu-items {
+    position: relative;
+    width: 100%;
+    padding: 45px 45px;
+    height: 95vh;
+    background: $white;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        td {
+            border-bottom: 1px solid rgba($black, 0.2);
+            height: 75px;
+            font-family: $aleo-regular;
+            &:nth-child(even) {
+                text-align: end;
+            }
+        }
+        th {
+            text-align: start;
+            font-family: $aleo-regular;
+            &:nth-child(even) {
+                text-align: end;
+            }
+        }
+        @include mq-L(768px) {
+            width: 500px;
+        }
+    }
+    @include mq-L(768px) {
+        width: 745px;
+    }
+}
+
+.close-icon-modal {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    width: 20px;
+    height: 30px;
+    cursor: pointer;
+    &:hover {
+        transform: rotate(360deg);
+        transition: all 300ms ease-in-out;
+    }
+}
+
+.close-modal {
+    display: inline-flex;
+    width: 20px;
+    height: 3px;
+    background: $txt-dark-gray;
+    transform: rotateZ(44deg);
+    &::after {
+        content: '';
+        display: inline-flex;
+        width: 20px;
+        height: 3px;
+        background: $txt-dark-gray;
+        transform: rotateZ(273deg);
+    }
+}
+
+.modal-open {
+    display: flex;
+    transform: scale(1);
+    transition: all 500ms ease-in-out;
+    .modal-menu-items {
+        animation: menuAnime 500ms ease-in-out;
+    }
+}
+
+@keyframes menuAnime {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
