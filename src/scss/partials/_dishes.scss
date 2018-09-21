@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 290px auto 0;
-    h1 {
+    h2 {
         position: absolute;
         top: -95px;
         text-transform: uppercase;
@@ -30,7 +30,7 @@
     }
 }
 
-.diches-dots {
+.dishes-dots {
     position: absolute;
     width: 75px;
     display: flex;
@@ -46,7 +46,7 @@
     }
 }
 
-.diches-dot {
+.dishes-dot {
     width: 10px;
     height: 10px;
     background: rgba($txt-gray, 0.2);

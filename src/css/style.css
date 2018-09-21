@@ -702,7 +702,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 290px auto 0; }
-  .featured-dishes h1 {
+  .featured-dishes h2 {
     position: absolute;
     top: -95px;
     text-transform: uppercase;
@@ -710,7 +710,7 @@
     font-size: 20px;
     color: #3b3b3b; }
     @media (min-width: 1130px) {
-      .featured-dishes h1::after {
+      .featured-dishes h2::after {
         content: '';
         display: inline-block;
         width: 200px;
@@ -723,7 +723,7 @@
     .featured-dishes {
       justify-content: space-between; } }
 
-.diches-dots {
+.dishes-dots {
   position: absolute;
   width: 75px;
   display: flex;
@@ -733,18 +733,18 @@
   bottom: -70px;
   transform: translateX(50%); }
   @media (min-width: 1130px) {
-    .diches-dots {
+    .dishes-dots {
       right: 45px;
       top: -90px;
       bottom: initial; } }
 
-.diches-dot {
+.dishes-dot {
   width: 10px;
   height: 10px;
   background: rgba(85, 85, 85, 0.2);
   border-radius: 50%;
   cursor: pointer; }
-  .diches-dot.active, .diches-dot:hover {
+  .dishes-dot.active, .dishes-dot:hover {
     background: #f34949; }
 
 .dish {
@@ -885,30 +885,31 @@
 
 .about {
   padding-top: 177px; }
-  .about h1 {
+  .about h3 {
     font-family: AleoBold;
     font-size: 22px;
     color: #3b3b3b;
     text-transform: uppercase; }
     @media (min-width: 590px) {
-      .about h1::after {
+      .about h3::after {
         content: '';
         display: inline-block;
         width: 200px;
         height: 1px;
         background: rgba(0, 0, 0, 0.1);
         margin: 0 0 5px 50px; } }
-  .about h2 {
-    font-family: AleoLight;
-    font-size: 40px;
-    color: #555;
-    margin: 70px 0 40px; }
 
 .about-wrap h6 {
   font-family: AleoBold;
   font-size: 16px;
   color: #3b3b3b;
   margin: 20px 0 15px; }
+
+.about-wrap h2 {
+  font-family: AleoLight;
+  font-size: 40px;
+  color: #555;
+  margin: 70px 0 40px; }
 
 .about-upper {
   width: 100%;
@@ -975,12 +976,12 @@
 
 .gallery {
   padding: 185px 0 125px; }
-  .gallery h1 {
+  .gallery h2 {
     font-family: AleoBold;
     font-size: 22px;
     color: #3b3b3b;
     text-transform: uppercase; }
-    .gallery h1::after {
+    .gallery h2::after {
       content: '';
       display: inline-block;
       width: 200px;
@@ -988,7 +989,7 @@
       background: rgba(59, 59, 59, 0.2);
       margin: 0 0 6px 40px; }
       @media (max-width: 450px) {
-        .gallery h1::after {
+        .gallery h2::after {
           display: none; } }
 
 .gallery-wrapper {

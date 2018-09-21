@@ -85,9 +85,13 @@ $("a").on('click', function(event) {
         });
         // List gallery images
         var nextImage = $(this).next().children().first().attr('src');
-        var currentImage = $(this).children().first();
+        var prevImage = $(this).prev().children().first().attr('src');
         $('.gallery-right').click(function() {
             $('.img-modal').children().first().attr('src', nextImage);
+
+        });
+        $('.gallery-left').click(function() {
+            $('.img-modal').children().first().attr('src', prevImage);
 
         });
     });

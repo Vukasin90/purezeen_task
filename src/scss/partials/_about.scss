@@ -1,6 +1,6 @@
 .about {
     padding-top: 177px;
-    h1 {
+    h3 {
         font-family: $aleo-bold;
         font-size: 22px;
         color: $txt-dark-gray;
@@ -16,19 +16,20 @@
             }
         }
     }
-    h2 {
-        font-family: $aleo-light;
-        font-size: 40px;
-        color: $txt-gray;
-        margin: 70px 0 40px;
-    }
 }
 
 .about-wrap h6 {
     font-family: $aleo-bold;
     font-size: 16px;
     color: $txt-dark-gray;
-    margin: 20px 0 15px; 
+    margin: 20px 0 15px;
+}
+
+.about-wrap h2 {
+    font-family: $aleo-light;
+    font-size: 40px;
+    color: $txt-gray;
+    margin: 70px 0 40px;
 }
 
 .about-upper {
